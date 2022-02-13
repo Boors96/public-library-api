@@ -9,4 +9,4 @@ use Jenssegers\Mongodb\Eloquent\Model;
 class Book extends Model
 {
     use HasFactory;
-   }
+}

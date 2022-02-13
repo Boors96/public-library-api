@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 /*
@@ -29,3 +30,18 @@ Route::put('like', [BookController::class, 'like']);
 
 // comment on a book
 Route::post('comment', [BookController::class, 'comment']);
+
+// get book comments
+Route::get('get-comments/{id}', [BookController::class, 'getBookComments']);
+
+// upload book
+Route::get('download-book/{id}', [BookController::class, 'downloadBook']);
+
+// Route::prefix('/user')->group(function(){
+
+//     // forget password
+//     Route::post('forget', [UserController::class, 'sendResetLinkResponse'])->middleware('guest')->name('password.email');
+
+    
+// });
+
